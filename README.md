@@ -5,7 +5,7 @@ Cocodrile project
 ![Glow](http://imagenesdedinosaurios.com/wp-content/uploads/2016/08/caricaturas-de-cocodrilos-gratis.png)
 
 ### What is this repository for? ###
-Sentinela traning, this project has objetive of teach me how to work Sentinela?
+Sentinela training, this project has objective of teach me : how to work Sentinela?
 ### Requeriments ###
 
 * [Docker](https://docs.docker.com/engine/installation/)
