@@ -1,21 +1,25 @@
-# README #
+# project-one #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Cocodrile project
+
+![Glow](http://imagenesdedinosaurios.com/wp-content/uploads/2016/08/caricaturas-de-cocodrilos-gratis.png)
 
 ### What is this repository for? ###
+Sentinela traning, this project has objetive of teach me how to work Sentinela?
+### Requeriments ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* [Docker](https://docs.docker.com/engine/installation/)
+
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+```{r, engine='bash', count_lines}
+$ docker build -t project-one:latest .
+```
+
+```{r, engine='bash', count_lines}
+$ docker run -d -p 5000:5000 project-one
+```
 
 ### Contribution guidelines ###
 
