@@ -15,7 +15,7 @@ Sentinela training, this project has objective of teach me : how to work Sentine
 
 ```{r, engine='bash', count_lines}
 $ docker build -t project-one:latest .
-```
+
 
 ```{r, engine='bash', count_lines}
 $ docker run -d -p 5000:5000 project-one
