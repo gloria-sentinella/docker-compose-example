@@ -9,16 +9,21 @@ Sentinela training, this project has objective of teach me : how to work Sentine
 ### Requeriments ###
 
 * [Docker](https://docs.docker.com/engine/installation/)
+* [Docker compose](https://docs.docker.com/compose/install/)
 
 
 ### How do I get set up? ###
 
 ```{r, engine='bash', count_lines}
-$ docker build -t project-one:latest .
+$ docker-compose build .
 ```
 
 ```{r, engine='bash', count_lines}
-$ docker run -d -p 5000:5000 project-one
+$ docker-compose up
+```
+### Containers in backgroud
+```{r, engine='bash', count_lines}
+$ docker-compose -d up
 ```
 
 ### Contribution guidelines ###
