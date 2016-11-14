@@ -14,15 +14,16 @@ Sentinela training, this project has objective of teach me : how to work Sentine
 
 ### How do I get set up? ###
 
-```{r, engine='bash', count_lines}
+``` bash
 $ docker-compose build .
-```
+``` 
 
-```{r, engine='bash', count_lines}
+``` bash
 $ docker-compose up
 ```
 ### Containers in backgroud
-```{r, engine='bash', count_lines}
+
+```
 $ docker-compose -d up
 ```
 
