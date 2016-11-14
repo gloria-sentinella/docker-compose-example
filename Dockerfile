@@ -1,10 +1,6 @@
-FROM ubuntu:latest
-MAINTAINER Gloria Palma "ing.gloriapalmagonzalez@gmail.com"
-RUN apt-get update -y
-RUN apt-get install -y python-pip python-dev build-essential
-RUN apt-get install -y libpq-dev
-COPY . /app
-WORKDIR /app
+FROM python:2.7
+MAINTAINER Gloria Palma "gloria@sentinel.la"
+ADD . /app
+WORKDIR /app/ 
 RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+ENTRYPOINT ["./entrypoint.sh"]

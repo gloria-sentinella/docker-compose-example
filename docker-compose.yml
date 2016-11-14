@@ -16,7 +16,7 @@ services:
        - RABBITMQ_DEFAULT_USER=admin
        - RABBITMQ_DEFAULT_PASS=admin
    influxdb:
-     image: influxdb:latest
+     image: tutum/influxdb:latest
      container_name: influxdb
      environment:
        - ADMIN_USER=admin
@@ -27,9 +27,9 @@ services:
        - "8086:8086"
        - "8090:8090"
    api:
-     build: ./
-     volumes:
-       - .:/app
+     build:
+      context: .
+      dockerfile: Dockerfile
      ports:
        - "5000:5000"
      depends_on:
@@ -40,18 +40,3 @@ services:
        -  db:db
        -  rabbitmq:amq
        -  influxdb:influx
-
-    # Celery worker
-   worker:  
-     build: .
-     command: celery worker --app=tasks
-     volumes:
-       - .:/app
-     links:
-       -  db:db
-       -  rabbitmq:amq
-       -  influxdb:influx
-     depends_on:
-       - db
-       - rabbitmq
-       - influxdb

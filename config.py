@@ -14,7 +14,7 @@ class BaseConfig(object):
 
     DEBUG = True
     TESTING = False
-    ADMINS = ['guillermo@sentinel.la']
+    ADMINS = ['gloria@sentinel.la']
     # http://flask.pocoo.org/docs/quickstart/#sessions
     SECRET_KEY = 'secret key'
 
@@ -29,8 +29,8 @@ class DefaultConfig(BaseConfig):
     INFLUX_USE_SSL = False
 
     #Celery
-    CELERY_BROKER_URL = 'amqp://admin:admin@rabbit//'
-    CELERY_BACKEND_URL = 'amqp://admin:admin@rabbit//'
+    CELERY_BROKER_URL = 'amqp://admin:admin@amq//'
+    CELERY_BACKEND_URL = 'amqp://admin:admin@amq//'
     BROKER_USE_SSL = False
   
 
